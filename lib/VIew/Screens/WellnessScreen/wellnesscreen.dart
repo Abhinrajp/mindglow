@@ -54,7 +54,13 @@ class _WellnessscreenState extends State<Wellnessscreen> {
                       fontsize: 14,
                       fontWeight: FontWeight.w700),
                   const SizedBox(height: 15),
-                  wellNessScreenWidgeet.healthBuilders()
+                  wellNessScreenWidgeet.healthBuilders(),
+                  const SizedBox(height: 15),
+                  const Customtext(
+                      text: 'Take care of these',
+                      fontsize: 14,
+                      fontWeight: FontWeight.w700),
+                  Expanded(child: wellNessScreenWidgeet.tipBuilderForWellness())
                 ],
               )))
     ]));

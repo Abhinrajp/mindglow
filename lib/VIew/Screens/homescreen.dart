@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 import 'package:mindglow/Controller/Appcontroll/appstatecontroll.dart';
 import 'package:mindglow/Controller/Services/authservices.dart';
 import 'package:mindglow/Controller/Utilities/utilities.dart';
-import 'package:mindglow/VIew/Video/youtubevideopl.dart';
 import 'package:mindglow/Widgets/HomescreenWidgets/homescreenwidgets.dart';
 import 'package:mindglow/Widgets/authwidgets.dart';
 
@@ -38,44 +36,58 @@ class _HomescreenState extends State<Homescreen> {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20)))),
-          Column(children: [homeAppbar(), Expanded(child: homeBody(context))])
+          Column(children: [
+            homeAppbar(context),
+            Expanded(child: homeBody(context))
+          ])
         ]));
   }
 }
 
-AppBar homeAppbar() {
+AppBar homeAppbar(BuildContext context) {
   return AppBar(
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      leading: Obx(() {
-        final userdata = appstatecontroller.userData.value;
-        Widget profileWidget;
-        if (userdata?.profileimage.length == 1) {
-          profileWidget = CircleAvatar(
-              radius: 25,
-              backgroundColor: Colors.green[300],
-              child: Text(userdata!.profileimage,
-                  style: const TextStyle(color: Colors.white, fontSize: 20)));
-        } else if (userdata?.profileimage == null) {
-          profileWidget = const CircleAvatar(backgroundColor: Colors.green);
-        } else if (userdata!.profileimage.isEmpty) {
-          profileWidget = const CircleAvatar(backgroundColor: Colors.green);
-        } else {
-          profileWidget = Image.network(userdata.profileimage,
-              height: 100.0, width: 100, fit: BoxFit.cover);
-        }
-        return Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: CircleAvatar(
-                backgroundColor: Colors.transparent,
-                radius: 30,
-                child: ClipOval(child: profileWidget)));
-      }),
-      title: Obx(() {
-        return Customtext(
-            text: appstatecontroller.userData.value?.name ?? '',
-            fontWeight: FontWeight.bold);
-      }));
+    backgroundColor: Colors.transparent,
+    elevation: 0,
+    leading: Obx(() {
+      final userdata = appstatecontroller.userData.value;
+      Widget profileWidget;
+      if (userdata?.profileimage.length == 1) {
+        profileWidget = CircleAvatar(
+            radius: 25,
+            backgroundColor: Colors.green[300],
+            child: Text(userdata!.profileimage,
+                style: const TextStyle(color: Colors.white, fontSize: 20)));
+      } else if (userdata?.profileimage == null) {
+        profileWidget = const CircleAvatar(backgroundColor: Colors.green);
+      } else if (userdata!.profileimage.isEmpty) {
+        profileWidget = const CircleAvatar(backgroundColor: Colors.green);
+      } else {
+        profileWidget = Image.network(userdata.profileimage,
+            height: 100.0, width: 100, fit: BoxFit.cover);
+      }
+      return Padding(
+          padding: const EdgeInsets.only(left: 15),
+          child: CircleAvatar(
+              backgroundColor: Colors.transparent,
+              radius: 30,
+              child: ClipOval(child: profileWidget)));
+    }),
+    title: Obx(() {
+      return Customtext(
+          text: appstatecontroller.userData.value?.name ?? '',
+          fontWeight: FontWeight.bold);
+    }),
+    actions: [
+      IconButton(
+          onPressed: () {
+            authservices.signout(context);
+          },
+          icon: const Icon(
+            Icons.exit_to_app_rounded,
+            color: Colors.white,
+          ))
+    ],
+  );
 }
 
 Widget homeBody(BuildContext context) {

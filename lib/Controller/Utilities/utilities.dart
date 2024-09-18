@@ -70,5 +70,105 @@ List<WellnessModel> healthList = [
           "Sleep is one of the most crucial aspects of your overall well-being. Good sleep is essential for the body's recovery, mental clarity, and emotional balance. This wellness program focuses on improving the quality of your sleep through guided techniques such as meditation, relaxation, and breathing exercises. You'll learn about the importance of sleep hygiene—how your sleep environment, routine, and habits can affect your rest. The program provides strategies for winding down at night, establishing a consistent sleep schedule, and tackling common sleep disturbances like insomnia or stress-induced sleeplessness. By achieving restorative sleep, you can boost your energy levels, enhance memory, and support a stronger immune system.",
       color: Colors.indigo.shade900),
 ];
-// List<WellnessModel> typesOfHealth() {WellnessModel(title: 
-// 'Physical Health', imgUrl: 'lib/Assets/physical.png', describtion: describtion, longDescribtion: longDescribtion, color: color)}
+List<WellnessModelDaily> typesOfHealth = [
+  WellnessModelDaily(
+      mainImgUri: 'lib/Assets/physical.png',
+      videoUri: 'https://www.youtube.com/watch?v=AEPnYII8uSI',
+      content: [
+        'Cardiovascular',
+        'Strength Training',
+        'Flexibility and Stretching',
+        'Balance Exercises',
+        'Endurance Training',
+        'Mobility Exercises'
+      ],
+      contentDescribtion: [
+        ' Activities that increase your heart rate and improve the efficiency of the cardiovascular system in absorbing and transporting oxygen.Improves heart health, stamina, lung capacity, and endurance; helps in weight management; reduces the risk of heart diseases, stroke, and diabetes.',
+        ' Exercises that involve working against resistance to build muscle strength and endurance.Increases muscle mass, strengthens bones, improves metabolism, and helps in body toning. Also supports joint health and improves posture.',
+        'Exercises aimed at improving the range of motion of muscles and joints. Improves muscle elasticity, reduces the risk of injury, enhances posture and balance, and helps in relaxation and stress reduction.',
+        ' Activities that enhance coordination and balance, crucial for injury prevention, especially as we age.Reduces the risk of falls, improves posture, coordination, and body control. It is particularly beneficial for elderly individuals.',
+        'health refers to the condition of the body and its ability to perform daily activities without fatigue or physical ',
+        'Activities focused on improving joint mobility and allowing for better movement efficiency.Enhances movement range, reduces stiffness, and prevents injury.'
+      ],
+      title: 'Physical Health',
+      imgUrl: '',
+      describtion:
+          'Physical health refers to the condition of the body and its ability to perform daily activities without fatigue or physical stress. It involves maintaining proper nutrition, engaging in regular physical activity, getting sufficient rest, and attending to medical needs. Practicing preventive care, like routine check-ups and vaccinations, is essential for maintaining physical well-being. Keeping a balance between exercise, diet, and rest promotes a healthy body and reduces the risk of chronic diseases such as heart disease, diabetes, and obesity.',
+      color: Colors.orange.withOpacity(.6),
+      iconData: Icons.sports_gymnastics_rounded),
+  WellnessModelDaily(
+      mainImgUri: 'lib/Assets/mental.png',
+      videoUri: 'https://www.youtube.com/watch?v=G0zJGDokyWQ',
+      content: [
+        'Psychotherapy',
+        'Counseling',
+        'Mindfulness and Meditation',
+        'Art and Creative Therapies',
+        'Lifestyle and Holistic Approaches',
+        'Psychoeducation'
+      ],
+      contentDescribtion: [
+        ' A therapeutic treatment that involves talking with a trained mental health professional to explore emotions, thoughts, and behaviors.Helps people manage intense emotions and improve relationships.',
+        'Similar to therapy, counseling offers a safe space to discuss mental health challenges, often focusing on specific issues like stress, grief, or relationship problems.Aims to improve communication and resolve conflicts between partners.',
+        ' Practices that encourage self-awareness and help individuals manage stress and anxiety by staying present in the moment. Focuses on breathing and observing thoughts without judgment.',
+        'Therapies that use creative expression to help people explore and communicate emotions.Uses drawing, painting, or sculpting to help express emotions and process trauma.',
+        ' Focus on improving mental health through holistic and lifestyle changes. Physical activity, especially aerobic exercise, is known to reduce anxiety and improve mood.Combines physical postures, breathing exercises, and meditation to promote mental relaxation and emotional balance.',
+        ' Involves educating individuals about their mental health condition to empower them to manage symptoms effectively. Helps family members understand the condition and how to support their loved one.'
+      ],
+      title: 'Mental Health',
+      imgUrl: '',
+      describtion:
+          'Mental health encompasses emotional, psychological, and social well-being. It affects how we think, feel, and behave in our daily lives. Good mental health helps people cope with stress, build relationships, and make decisions. It involves managing emotions, maintaining self-esteem, and addressing mental disorders such as anxiety or depression. Mental health is integral to our overall well-being, and it can be nurtured through therapy, mindfulness practices, and support systems that promote resilience and emotional regulation.',
+      color: Colors.indigo.withOpacity(.6),
+      iconData: Icons.psychology),
+  WellnessModelDaily(
+      mainImgUri: 'lib/Assets/environmental.png',
+      videoUri: 'https://www.youtube.com/watch?v=7TL9_VpEPbA',
+      content: [
+        'Air Quality Management',
+        'Water Quality Management',
+        'Waste Management',
+        'Soil and Land Management',
+        'Noise Pollution Control',
+        'Radiation Protection'
+      ],
+      contentDescribtion: [
+        'Focuses on monitoring and improving the air we breathe by reducing pollution from industrial, vehicular, and other sources.Educating the public about the health impacts of air pollution',
+        ' Involves ensuring access to clean and safe drinking water, managing wastewater, and protecting water bodies from pollution.Monitoring drinking water sources and wastewater treatment facilities.',
+        'Concerned with the proper disposal, recycling, and management of waste to reduce pollution and health hazards.Collection and disposal of solid and hazardous waste.',
+        'Involves protecting land from contamination, ensuring safe agricultural practices, and managing soil erosion and pollution.Preventing soil contamination from industrial activities and landfills.',
+        'Involves regulating and reducing noise pollution in urban and industrial areas to protect human health and the environment.Monitoring noise levels in cities and near industrial sites.',
+        'Focuses on regulating and minimizing exposure to harmful radiation, both natural and man-made, to protect human health.Monitoring radiation levels from medical equipment, nuclear power plants, and industrial'
+      ],
+      title: 'Environmental Health',
+      imgUrl: '',
+      describtion:
+          'Environmental health refers to the interaction between individuals and their surroundings, both natural and man-made. A healthy environment supports overall well-being by providing clean air, water, and living conditions that reduce exposure to toxins and pollutants. Practicing eco-friendly behaviors, such as recycling and conserving energy, not only protects the planet but also contributes to personal health. Maintaining a safe and nurturing home, work, and community environment plays a critical role in supporting one’s physical and mental health.',
+      color: Colors.green.withOpacity(.6),
+      iconData: Icons.park),
+  WellnessModelDaily(
+      mainImgUri: 'lib/Assets/spiritual.png',
+      videoUri: 'https://www.youtube.com/watch?v=IW-qtXaWzvM',
+      content: [
+        'Meditation and Mindfulness',
+        'Prayer and Reflection',
+        'Spiritual Reading and Study',
+        'Rituals and Ceremonies',
+        'Service and Compassion',
+        'Self-Exploration and Personal Growth'
+      ],
+      contentDescribtion: [
+        ' Practices that involve focusing the mind and achieving a state of mental clarity and calm. Meditation can help individuals connect with their inner self and achieve greater peace and understanding.',
+        'Spiritual practices involving communication with a higher power or divine presence. Prayer and reflection help individuals find guidance, express gratitude, and seek comfort.',
+        'Engaging with texts that explore spiritual, philosophical, or religious teachings. This practice helps individuals gain insights into their beliefs and deepen their understanding of spiritual concepts.',
+        ' Engaging in structured practices that hold spiritual significance. Rituals and ceremonies often mark important life events and transitions, and they help individuals connect with their traditions.',
+        'Engaging in acts of kindness and service to others as a way to foster spiritual growth and fulfillment. Helping others and practicing compassion can enhance one’s sense of purpose and connection.',
+        ' Engaging in self-discovery and personal development to align with one’s spiritual values and goals. This can involve various introspective practices and self-improvement efforts.'
+      ],
+      title: 'Spiritual Health',
+      imgUrl: '',
+      describtion:
+          '''Spiritual health relates to an individual's sense of purpose, meaning in life, and connection to something greater than oneself, whether through religion, personal beliefs, or a connection with nature. It fosters a sense of inner peace and harmony, often enhanced through practices such as meditation, prayer, or reflection. Spiritual health also involves living in alignment with one's values and beliefs, and many find fulfillment through service to others or engagement with community. Cultivating spiritual health contributes to overall life satisfaction and emotional well-being.''',
+      color: Colors.blueGrey.withOpacity(.6),
+      iconData: Icons.self_improvement)
+];

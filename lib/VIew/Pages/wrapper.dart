@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mindglow/VIew/Screens/Auth/siginscreen.dart';
 import 'package:mindglow/VIew/Screens/Home/homebottomnavigation.dart';
+import 'package:mindglow/VIew/Screens/SplashScreens/splashscreenmain.dart';
 
 class Wrapper extends StatelessWidget {
   const Wrapper({super.key});
@@ -15,7 +16,7 @@ class Wrapper extends StatelessWidget {
           if (snapshot.hasData) {
             return const Homebottomnavigationbar();
           } else {
-            return const Siginscreen();
+            return const Onboardscreen();
           }
         },
       ),

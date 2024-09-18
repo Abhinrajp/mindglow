@@ -5,8 +5,8 @@ import 'package:mindglow/Controller/Appcontroll/appstatecontroll.dart';
 import 'package:mindglow/Controller/Utilities/utilities.dart';
 import 'package:mindglow/VIew/Screens/homescreen.dart';
 import 'package:mindglow/VIew/Screens/libraryscreen.dart';
-import 'package:mindglow/VIew/Screens/supportscreen.dart';
-import 'package:mindglow/VIew/Screens/wellnesscreen.dart';
+import 'package:mindglow/VIew/Screens/SupportScreens/supportscreen.dart';
+import 'package:mindglow/VIew/Screens/WellnessScreen/wellnesscreen.dart';
 import 'package:mindglow/Widgets/Showwidget/bottomcontainer.dart';
 
 class Homebottomnavigationbar extends StatefulWidget {

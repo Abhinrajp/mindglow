@@ -137,24 +137,30 @@ class MoodTracker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      const Customtext(
-          text: 'How is your Mood today',
-          fontWeight: FontWeight.bold,
-          fontsize: 16),
-      Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-        moodContainer(const Icon(Icons.sentiment_very_satisfied, size: 100),
-            "Happy", context),
-        moodContainer(
-            const Icon(Icons.sentiment_neutral, size: 100), "Neutral", context)
+    return Container(
+      color: Colors.white.withOpacity(.2),
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+        const Customtext(
+            text: 'How is your Mood today',
+            fontWeight: FontWeight.bold,
+            fontsize: 16),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          moodContainer(const Icon(Icons.sentiment_very_satisfied, size: 100),
+              "Happy", context),
+          moodContainer(const Icon(Icons.sentiment_neutral, size: 100),
+              "Neutral", context)
+        ]),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          moodContainer(const Icon(Icons.sentiment_dissatisfied, size: 100),
+              "Gloomy", context),
+          moodContainer(
+              const Icon(Icons.sentiment_very_dissatisfied, size: 100),
+              "Sad",
+              context)
+        ])
       ]),
-      Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-        moodContainer(const Icon(Icons.sentiment_dissatisfied, size: 100),
-            "Gloomy", context),
-        moodContainer(const Icon(Icons.sentiment_very_dissatisfied, size: 100),
-            "Sad", context)
-      ])
-    ]);
+    );
   }
 }
 

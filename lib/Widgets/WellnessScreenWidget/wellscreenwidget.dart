@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:mindglow/Controller/Utilities/utilities.dart';
 import 'package:mindglow/Model/wellnessmodel.dart';
+import 'package:mindglow/VIew/Screens/WellnessScreen/healthtypedetailsreen.dart';
 import 'package:mindglow/Widgets/authwidgets.dart';
 
 class WellNessScreenWidgeet {
@@ -94,16 +95,41 @@ class WellNessScreenWidgeet {
 
   Widget tipBuilderForWellness() {
     return ListView.builder(
-      itemBuilder: (context, index) {
-        return Card(
-          child: Container(
-            child: Row(
-              children: [],
-            ),
-          ),
-        );
-      },
-      itemCount: 5,
-    );
+        itemBuilder: (context, index) {
+          var data = typesOfHealth[index];
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          HealthTypeDetailsScreen(wellnessModelDaily: data)));
+            },
+            child: Card(
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: data.color,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(10))),
+                    height: 80,
+                    child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                  height: 50,
+                                  width: 70,
+                                  child: Image.asset(data.mainImgUri)),
+                              const SizedBox(width: 20),
+                              Customtext(
+                                  text: data.title,
+                                  fontWeight: FontWeight.bold,
+                                  fontsize: 14),
+                              Icon(data.iconData)
+                            ])))),
+          );
+        },
+        itemCount: 4);
   }
 }
