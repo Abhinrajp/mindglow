@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "167168465091",
+    "project_id": "mindglow-5011b",
+    "storage_bucket": "mindglow-5011b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167168465091:android:39a7c163f6c9048513ea76",
+        "android_client_info": {
+          "package_name": "in.mindglow.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRP3TVbxQ0tV3G-u30HlYLfnFSi-9N3Ak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
